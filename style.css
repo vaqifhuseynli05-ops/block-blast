@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1e1e2e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.controls {
+  margin-bottom: 10px;
+}
+
+#imageUpload {
+  display: none;
+}
+
+.upload-btn {
+  background-color: #89b4fa;
+  color: #11111b;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.upload-btn:hover {
+  background-color: #b4befe;
+}
+
+/* 8x8 Grid parametri */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  gap: 4px;
+  background-color: #313244;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background-color: #45475a;
+  border-radius: 4px;
+  cursor: pointer;
+  background-size: 432px 432px; /* Toplam şəbəkə ölçüsünə uyğun */
+  transition: background-color 0.2s;
+}
+
+.cell.active {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
